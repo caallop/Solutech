@@ -14,7 +14,22 @@ let clientForm = document.getElementById('clientForm')
 let submitButton = document.getElementById('submitButton')
 
 clientForm.addEventListener('submit', (e) => {
-    e.preventDefault()
+    /*e.preventDefault()
+    console.log("teste do botao")
+    console.log("teste do botao")
+    console.log("teste do botao")
+    console.log(phone);
+    console.log(contactName);
+    console.log(companyName);
+    console.log(email);
+    console.log(password);
+    console.log(cnpjCompany)
+    alert(phone);
+    alert(contactName);
+    alert(companyName);
+    alert(email);
+    alert(password);
+    alert(cnpjCompany)*/
 })
 
 
@@ -22,6 +37,7 @@ function saveClient() {
     console.log("teste do botao")
     console.log("teste do botao")
     console.log("teste do botao")
+<<<<<<< HEAD
     alert(`  Empresa: ${companyName.value}
              Contato: ${contactName.value}
              Email ${email.value}
@@ -35,6 +51,22 @@ function saveClient() {
              Telefone ${phone.value}
              CNPJ ${cnpjCompany.value}`);
 
+=======
+    console.log(phone);
+    console.log(contactName);
+    console.log(companyName);
+    console.log(email);
+    console.log(password);
+    console.log(cnpjCompany)
+    alert(phone);
+    alert(contactName);
+    alert(companyName);
+    alert(email);
+    alert(password);
+    alert(cnpjCompany)
+    console.log(companyName, contactName, email, password, phone, cnpjCompany);
+    alert(companyName, contactName, email, password, phone, cnpjCompany);
+>>>>>>> ac2a27ae91f31ad32ca357090af90be4c4652458
     /* const clientData = {
          companyName: companyName,
          contactName: contactName,
