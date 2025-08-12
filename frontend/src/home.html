@@ -10,38 +10,38 @@
 
 <body>
     <form action="" id="clientForm">
-    <div id="clientCompany" class="size-72">
+        <div id="clientCompany" class="size-72">
 
-        <div><label for="companyName">insira sua razão social</label>
-            <input type="text" id="companyName">
-        </div>
-        <div> <label for="contactName" class="text-3xl font-bold underline">insira seu nome</label>
-            <input type="text" id="contactName">
-            <div>
-                <label for="email">insira seu email</label>
-                <input type="text" id="email">
+            <div><label for="companyName">insira sua razão social</label>
+                <input type="text" id="clientCompanyName">
             </div>
             <div>
-                <label for="password">insira sua senha</label>
-                <input type="text" id="password">
+                <label for="contactName" class="text-3xl font-bold underline">insira seu nome</label>
+                <input type="text" id="clientContactName">
+                <div>
+                    <label for="">insira seu email</label>
+                    <input type="text" id="clientEmail">
+                </div>
+                <div>
+                    <label for="password">insira sua senha</label>
+                    <input type="text" id="clientePassword">
+                </div>
             </div>
-        </div>
-        <div>
-            <label for="phone">insira sua telefone</label>
-            <input type="text" id="phone">
-        </div>
+            <div>
+                <label for="phone">insira sua telefone</label>
+                <input type="text" id="phone">
+            </div>
 
-        <div>
-            <label for="cnpjCompany">insira sua CNPJ</label>
-            <input type="text" id="cnpjCompany">
-        </div>
+            <div>
+                <label for="cnpjCompany">insira sua CNPJ</label>
+                <input type="text" id="cnpjCompany">
+            </div>
 
-        <button type="button" id="submitButton" onclick="saveClient()">botao daora</button>
-    </div>
+            <button type="button" id="submitButton" onclick="saveClient()">botao daora</button>
+        </div>
     </form>
 
     <script src="../../backend/controller/clientController.js"></script>
 </body>
 
 </html>
-
