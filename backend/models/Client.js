@@ -27,7 +27,7 @@ const clientSchema = new Schema({
         required: false
     },
     // CNPJ ou CPF do cliente, útil para faturamento e contratos
-    taxId: {
+    cnpjCompany: {
         type: String,
         required: false,
         unique: true,
