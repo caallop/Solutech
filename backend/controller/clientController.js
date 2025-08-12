@@ -4,53 +4,30 @@
  * 
  */
 
-let companyName = document.getElementById('companyName').value
-let contactName = document.getElementById('contactName').value
-let email = document.getElementById('email').value
-let password = document.getElementById('password').value
-let phone = document.getElementById('phone').value
-let cnpjCompany = document.getElementById('cnpjCompany').value
-let clientForm = document.getElementById('clientForm').value
+let companyName = document.getElementById('companyName')
+let contactName = document.getElementById('contactName')
+let email = document.getElementById('email')
+let password = document.getElementById('password')
+let phone = document.getElementById('phone')
+let cnpjCompany = document.getElementById('cnpjCompany')
+let clientForm = document.getElementById('clientForm')
 let submitButton = document.getElementById('submitButton')
 
 clientForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log("teste do botao")
-    console.log("teste do botao")
-    console.log("teste do botao")
-    console.log(phone);
-    console.log(contactName);
-    console.log(companyName);
-    console.log(email);
-    console.log(password);
-    console.log(cnpjCompany)
-    alert(phone);
-    alert(contactName);
-    alert(companyName);
-    alert(email);
-    alert(password);
-    alert(cnpjCompany)
 })
 
 
 function saveClient() {
-        console.log("teste do botao")
     console.log("teste do botao")
     console.log("teste do botao")
-    console.log(phone);
-    console.log(contactName);
-    console.log(companyName);
-    console.log(email);
-    console.log(password);
-    console.log(cnpjCompany)
-    alert(phone);
-    alert(contactName);
-    alert(companyName);
-    alert(email);
-    alert(password);
-    alert(cnpjCompany)
-    console.log(companyName, contactName, email, password, phone, cnpjCompany);
-    alert(companyName, contactName, email, password, phone, cnpjCompany);
+    console.log("teste do botao")
+    alert(`  Empresa: ${companyName.value}
+             Contato: ${contactName.value}
+             Email ${email.value}
+             Senha ${password.value}
+             Telefone ${phone.value}
+             CNPJ ${cnpjCompany.value}`);
     /* const clientData = {
          companyName: companyName,
          contactName: contactName,
