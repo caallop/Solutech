@@ -4,10 +4,10 @@
  * 
  */
 
-let companyName = document.getElementById('clientCompanyName')
-let contactName = document.getElementById('clientContactName')
-let email = document.getElementById('clientEmail')
-let password = document.getElementById('clientePassword')
+let companyName = document.getElementById('companyName')
+let contactName = document.getElementById('contactName')
+let email = document.getElementById('email')
+let password = document.getElementById('password')
 let phone = document.getElementById('phone')
 let cnpjCompany = document.getElementById('cnpjCompany')
 let clientForm = document.getElementById('clientForm')
@@ -34,15 +34,23 @@ clientForm.addEventListener('submit', (e) => {
 
 
 function saveClient() {
-        console.log("teste do botao")
     console.log("teste do botao")
     console.log("teste do botao")
-    console.log(phone.value);
-    console.log(contactName.value);
-    console.log(companyName.value);
-    console.log(email.value);
-    console.log(password.value);
-    console.log(cnpjCompany.value)
+    console.log("teste do botao")
+    console.log(phone);
+    console.log(contactName);
+    console.log(companyName);
+    console.log(email);
+    console.log(password);
+    console.log(cnpjCompany)
+    alert(phone);
+    alert(contactName);
+    alert(companyName);
+    alert(email);
+    alert(password);
+    alert(cnpjCompany)
+    console.log(companyName, contactName, email, password, phone, cnpjCompany);
+    alert(companyName, contactName, email, password, phone, cnpjCompany);
     /* const clientData = {
          companyName: companyName,
          contactName: contactName,
