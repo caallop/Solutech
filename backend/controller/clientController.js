@@ -28,6 +28,13 @@ function saveClient() {
              Senha ${password.value}
              Telefone ${phone.value}
              CNPJ ${cnpjCompany.value}`);
+    console.log(`  Empresa: ${companyName.value}
+             Contato: ${contactName.value}
+             Email ${email.value}
+             Senha ${password.value}
+             Telefone ${phone.value}
+             CNPJ ${cnpjCompany.value}`);
+
     /* const clientData = {
          companyName: companyName,
          contactName: contactName,
