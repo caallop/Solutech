@@ -49,13 +49,4 @@ async function saveClient() {
              Senha ${password.value}
              Telefone ${phone.value}
              CNPJ ${cnpjCompany.value}`);
-
-    /* const clientData = {
-         companyName: companyName,
-         contactName: contactName,
-         email: email,
-         password: password,
-         phone: phone,
-         cnpjCompany: cnpjCompany
-     };*/
 }

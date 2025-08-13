@@ -1,43 +1,49 @@
-// Importa o Schema e o model do mongoose
-const { Schema, model } = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../database'); // Importa a conexão
 
-// Criação da estrutura da coleção de Clientes
-const clientSchema = new Schema({
+const Client = sequelize.define('Client', {
+
     companyName: {
-        type: String,
-        required: [true, 'O nome da empresa é obrigatório.']
+        type: DataTypes.STRING,
+        allowNull: false 
     },
     contactName: {
-        type: String,
-        required: [true, 'O nome do responsável é obrigatório.']
+        type: DataTypes.STRING,
+        allowNull: false
     },
     email: {
-        type: String,
-        required: [true, 'O email é obrigatório.'],
+        type: DataTypes.STRING,
+        allowNull: false,
         unique: true,
-        lowercase: true,
-        trim: true
+        validate: {
+            isEmail: true
+        }
     },
     password: {
-        type: String,
-        required: [true, 'A senha é obrigatória.']
+        type: DataTypes.STRING,
+        allowNull: false
     },
     phone: {
-        type: String,
-        required: false
+        type: DataTypes.STRING,
+        allowNull: true
     },
-    // CNPJ ou CPF do cliente, útil para faturamento e contratos
     cnpjCompany: {
-        type: String,
-        required: false,
-        unique: true,
-        sparse: true // Permite múltiplos documentos com valor nulo, mas único se preenchido
+        type: DataTypes.STRING,
+        allowNull: true,
+        unique: true
     }
+    // Os campos 'createdAt' e 'updatedAt' são adicionados e gerenciados automaticamente
 }, {
-    // Adiciona automaticamente os campos: createdAt e updatedAt
-    timestamps: true,
-    versionKey: false
+    tableName: 'clients',
+    hooks: {
+        // Hooks são funções executadas em certos momentos do ciclo de vida do modelo
+        // Este hook simula o 'trim: true' e 'lowercase: true' do Mongoose para o email
+        beforeValidate: (client) => {
+            if (client.email) {
+                client.email = client.email.toLowerCase().trim();
+            }
+        }
+    }
 });
 
-// Exportar o modelo de dados para ser usado em outras partes da aplicação
-module.exports = model('Clients', clientSchema);
+module.exports = Client;

@@ -1,44 +1,38 @@
-/**
- * 
- * 
- */
+const { DataTypes } = require('sequelize');
+const sequelize = require('../database'); // Importa a conexão com o banco de dados
 
-//criação da estrutura da coleção
-const projectSchema = new Schema({
-    clientId: {
-        type: Schema.Types.ObjectId, 
-        ref: 'Clients', 
-        required: true
-    },
+const Project = sequelize.define('Project', {
+
     projectName: {
-        type: String,
-        required: true
+        type: DataTypes.STRING,
+        allowNull: false
     },
     projectDescription: {
-        type: String,
-        required: true
+        type: DataTypes.TEXT,
+        allowNull: false
     },
     projectType: {
-        type: String,
-        required: true
+        type: DataTypes.STRING,
+        allowNull: false
     },
     desiredDeadline: {
-        type: Date
+        type: DataTypes.DATEONLY, // DATEONLY é ideal para salvar apenas a data (sem horário)
+        allowNull: true 
     },
     status: {
-        type: String,
-        enum: ['Solicitado', 'Em Análise', 'Aprovado', 'Em Andamento', 'Concluído', 'Cancelado'],
-        default: 'Solicitado'
+        type: DataTypes.ENUM('Solicitado', 'Em Análise', 'Aprovado', 'Em Andamento', 'Concluído', 'Cancelado'),
+        defaultValue: 'Solicitado' 
     },
-    attachments: [{
-        type: String
-    }],
+    attachments: {
+        type: DataTypes.JSON, // A melhor forma de simular um array de strings no MySQL
+        allowNull: true
+    },
     requestDate: {
-        type: Date,
-        default: Date.now
+        type: DataTypes.DATE, 
+        defaultValue: DataTypes.NOW 
     }
+}, {
+    tableName: 'projects'
+});
 
-}, { versionKey: false });
-
-//exportar o modelo de dados para o main
-module.exports = model('Projects', projectSchema);
+module.exports = Project;
