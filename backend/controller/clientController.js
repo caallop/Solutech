@@ -33,7 +33,7 @@ clientForm.addEventListener('submit', (e) => {
 })
 
 
-function saveClient() {
+async function saveClient() {
     console.log("teste do botao")
     console.log("teste do botao")
     console.log("teste do botao")

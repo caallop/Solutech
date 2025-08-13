@@ -11,9 +11,9 @@ app.use(express.json()); // Habilita o uso de JSON no corpo das requisições
 // Configuração da conexão com o banco de dados
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'seu_usuario',
-  password: 'sua_senha',
-  database: 'seu_banco'
+  user: 'root',
+  password: '',
+  database: 'solutech'
 });
 
 // Endpoint para receber dados do frontend
