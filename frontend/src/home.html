@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/index.css">
-</head>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
 
-<body>
+  <body>
     <form action="" id="clientForm">
-        <div id="clientCompany" class="size-72">
-
-            <div><label for="companyName">insira sua razão social</label>
-                <input type="text" id="companyName">
-            </div>
-            <div>
-                <label for="contactName" class="text-3xl font-bold underline">insira seu nome</label>
-                <input type="text" id="contactName">
-                <div>
-                    <label for="">insira seu email</label>
-                    <input type="text" id="email">
-                </div>
-                <div>
-                    <label for="password">insira sua senha</label>
-                    <input type="text" id="password">
-                </div>
-            </div>
-            <div>
-                <label for="phone">insira sua telefone</label>
-                <input type="text" id="phone">
-            </div>
-
-            <div>
-                <label for="cnpjCompany">insira sua CNPJ</label>
-                <input type="text" id="cnpjCompany">
-            </div>
-
-            <button type="button" id="submitButton" onclick="saveClient()">botao daora</button>
+      <div id="clientCompany" class="size-72">
+        <div>
+          <label for="companyName">Insira sua razão social</label>
+          <input type="text" id="companyName" />
         </div>
+        <div>
+          <label for="contactName" class="text-3xl font-bold underline"
+            >insira seu nome</label
+          >
+          <input type="text" id="contactName" />
+          <div>
+            <label for="">Insira seu email</label>
+            <input type="text" id="email" />
+          </div>
+          <div>
+            <label for="password">Insira sua senha</label>
+            <input type="text" id="password" />
+          </div>
+        </div>
+        <div>
+          <label for="phone">Insira sua telefone</label>
+          <input type="text" id="phone" />
+        </div>
+
+        <div>
+          <label for="cnpjCompany">Insira sua CNPJ</label>
+          <input type="text" id="cnpjCompany" />
+        </div>
+
+        <button type="button" id="submitButton" onclick="saveClient()">
+          Botao daora
+        </button>
+      </div>
     </form>
 
+    
     <script src="../../backend/controller/clientController.js"></script>
-</body>
-
+  </body>
 </html>

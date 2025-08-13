@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="clientForm">
+      <div id="" class="container">
+        <div>
+          <input style="display: none" type="text" id="clientId" />
+        </div>
+        <div>
+          <label for="projectName" class="text-3xl font-bold underline"
+            >insira seu nome de projeto</label
+          >
+          <input type="text" id="projectName" />
+          <div>
+            <label for="projectDescription">Insira a descrição do seu projeto</label>
+            <input type="text" id="projectDescription" />
+          </div>
+          <div>
+            <label for="projectType">Insira o tipo do seu projeto</label>
+            <input type="text" id="projectType" />
+          </div>
+        </div>
+        <div>
+          <label for="desiredDeadline">Insira a data limite</label>
+          <input type="date" id="desiredDeadline"/>
+        </div>
+
+        <div>
+          <label for="attachments">Insira as caracteristicas</label>
+          <input type="text" id="attachments" />
+        </div>
+
+        <button type="button" id="submitButton" onclick="saveClient()">
+          Botao daora
+        </button>
+      </div>
+    </form>
+    <script src="../../backend/controller/projectController.js"></script>
+</body>
+</html>
